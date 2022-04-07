@@ -1,0 +1,26 @@
+C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+/* add these lines in the End of file */
+<VirtualHost 127.0.0.1:80>
+    ##ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "C:\xampp\htdocs\php-codegirls\php-fp-foodex\foodex\public"
+    ServerName foodex.com
+    ##ErrorLog "logs/dummy-host2.example.com-error.log"
+    ##CustomLog "logs/dummy-host2.example.com-access.log" common
+    <Directory "/opt/lamp7.2/apache2/htdocs">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+
+
+C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1 foodex.com 		/* add this line in the End of file */
+
+
+
+Now restart Apache
